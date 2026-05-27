@@ -24,7 +24,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/test', testRoutes);
 app.use('/api/result', resultRoutes);
 // test route
-app.get('/', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
