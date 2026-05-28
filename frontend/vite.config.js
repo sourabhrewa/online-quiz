@@ -10,5 +10,11 @@ export default defineConfig({
    build: {
     outDir: '../api/dist',
     emptyOutDir: true
-   }
+   },
+   server: {
+    proxy:{
+    '/api/auth': 'http://localhost:5000',
+      '/api/test': 'http://localhost:5000',
+      '/api/result': 'http://localhost:5000',    }
+  }
 })
